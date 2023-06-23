@@ -84,6 +84,18 @@ public class Job {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+
+        return ("\n" +
+                "ID: "+ (this.getId()+"\n"+
+                "Name: "+ (this.getName().toString().isEmpty() ? "Data not available" : this.getName())+"\n"+
+                "Employer: "+ (this.getEmployer().toString().isEmpty() ? "Data not available" : this.getEmployer())+"\n"+
+                "Location: "+ (this.getLocation().toString().isEmpty() ? "Data not available" : this.getLocation())+"\n"+
+                "Position Type: "+ (this.getPositionType().toString().isEmpty() ? "Data not available" :this.getPositionType()) +"\n"+
+                "Core Competency: "+ (this.getCoreCompetency().toString().isEmpty() ? "Data not available" : this.getCoreCompetency())+"\n"));
+    }
+
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
